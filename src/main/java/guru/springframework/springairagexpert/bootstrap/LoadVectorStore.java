@@ -6,7 +6,7 @@ import org.springframework.ai.document.Document;
 import org.springframework.ai.reader.tika.TikaDocumentReader;
 import org.springframework.ai.transformer.splitter.TextSplitter;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
-import org.springframework.ai.vectorstore.VectorStore;
+import org.springframework.ai.vectorstore.SimpleVectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -21,7 +21,7 @@ import java.util.List;
 public class LoadVectorStore implements CommandLineRunner {
 
     @Autowired
-    VectorStore vectorStore;
+    SimpleVectorStore vectorStore;
 
     @Autowired
     VectorStoreProperties vectorStoreProperties;
